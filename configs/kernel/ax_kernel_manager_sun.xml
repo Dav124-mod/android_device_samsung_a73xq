@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kernel-manager>
+    <!-- Little Cluster (Cores 0-3) -->
+    <cpu
+        id="little"
+        group="Little CPU"
+        minId="axion_min_freq"
+        maxId="axion_max_freq"
+        governorId="little_cpu_governor"
+        minNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
+        maxNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
+        availablePath="/sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies"
+        governorNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_governor"
+        governorAvailablePath="/sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors" />
+
+    <!-- Big/Gold Cluster (Cores 4-6) -->
+    <cpu
+        id="big"
+        group="Big CPU"
+        minId="axion_min_freq_big"
+        maxId="axion_max_freq_big"
+        governorId="big_cpu_governor"
+        minNode="/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq"
+        maxNode="/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq"
+        availablePath="/sys/devices/system/cpu/cpufreq/policy4/scaling_available_frequencies"
+        governorNode="/sys/devices/system/cpu/cpufreq/policy4/scaling_governor"
+        governorAvailablePath="/sys/devices/system/cpu/cpufreq/policy4/scaling_available_governors" />
+
+    <!-- Prime Cluster (Core 7) -->
+    <cpu
+        id="prime"
+        group="Prime CPU"
+        minId="axion_min_freq_prime"
+        maxId="axion_max_freq_prime"
+        governorId="prime_cpu_governor"
+        minNode="/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq"
+        maxNode="/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq"
+        availablePath="/sys/devices/system/cpu/cpufreq/policy7/scaling_available_frequencies"
+        governorNode="/sys/devices/system/cpu/cpufreq/policy7/scaling_governor"
+        governorAvailablePath="/sys/devices/system/cpu/cpufreq/policy7/scaling_available_governors" />
+
+    <!-- Qualcomm Adreno 642L GPU -->
+    <gpu
+        id="gpu"
+        group="GPU Controls"
+        node="/sys/class/kgsl/kgsl-3d0"
+        minNode="/sys/class/kgsl/kgsl-3d0/devfreq/min_freq"
+        maxNode="/sys/class/kgsl/kgsl-3d0/devfreq/max_freq"
+        currentNode="/sys/class/kgsl/kgsl-3d0/gpuclk"
+        availablePath="/sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies"
+        governorNode="/sys/class/kgsl/kgsl-3d0/devfreq/governor"
+        governorAvailablePath="/sys/class/kgsl/kgsl-3d0/devfreq/available_governors"
+        usageNode="/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage"
+        frequencyMultiplier="1"
+        values="608000000,578000000,490000000,400000000,300000000,190000000" />
+</kernel-manager>
