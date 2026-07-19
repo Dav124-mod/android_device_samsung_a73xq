@@ -34,6 +34,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Camera information (Galaxy A73 5G native sensor specs)
+AXION_CAMERA_REAR_INFO := 108
+AXION_CAMERA_FRONT_INFO := 32
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := Dav124-mod
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_778G_5G
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a73xq
 PRODUCT_DEVICE := a73xq
