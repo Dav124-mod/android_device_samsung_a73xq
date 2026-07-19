@@ -32,6 +32,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
 
+# Axion Kernel Manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/kernel/ax_kernel_manager_sun.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ax_kernel_manager.xml \
+    $(LOCAL_PATH)/rootdir/etc/ax_init_sun.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ax_init_sun.rc
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor
@@ -46,6 +51,12 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Define target sysfs paths for the AxKernelManager UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ax.kernel.cpu.path=/sys/devices/system/cpu/cpufreq \
+    ro.ax.kernel.gpu.path=/sys/class/kgsl/kgsl-3d0 \
+    ro.ax.kernel.sched.path=/sys/block/dm-0/queue/scheduler
 
 # UDFPS
 $(call soong_config_set,samsungUdfpsVars,udfps_zorder,0x20000000u)
