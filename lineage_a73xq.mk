@@ -44,6 +44,9 @@ AXION_MAINTAINER := Dav124-mod
 # Processor name (underscores become spaces)
 AXION_PROCESSOR := Snapdragon_778G_5G
 
+# Fix Vulkan issue in some apps 
+TARGET_NEEDS_VULKAN_MEDIA_FIX := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a73xq
 PRODUCT_DEVICE := a73xq
