@@ -47,6 +47,9 @@ AXION_PROCESSOR := Snapdragon_778G_5G
 # Fix Vulkan issue in some apps 
 TARGET_NEEDS_VULKAN_MEDIA_FIX := true
 
+# Enable Audio FX
+TARGET_INCLUDE_AXFX := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a73xq
 PRODUCT_DEVICE := a73xq
