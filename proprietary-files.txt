@@ -11,7 +11,6 @@ vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw
 vendor/firmware/cs35l40-rcv-dsp1-spk-prot.bin
 vendor/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin
 vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw
-vendor/etc/SoundBoosterParam.txt
 vendor/etc/dolby/dax-default.xml
 
 # ACDB
